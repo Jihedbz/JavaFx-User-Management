@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600" prefWidth="1500" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.adminDashboard">
+    <children>
+        <BorderPane>
+            <left>
+                <fx:include source="adminSidebar.fxml" />
+            </left>
+        </BorderPane>
+      <Pane fx:id="news_pane" layoutX="375.0" layoutY="98.0" prefHeight="60.0" prefWidth="1027.0" style="-fx-background-color: #23B5D3; -fx-background-radius: 10;">
+         <children>
+            <Text fx:id="scrolling_text" fill="WHITE" layoutX="13.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="1000.13671875">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Pane layoutX="376.0" layoutY="208.0" prefHeight="97.0" prefWidth="151.0" style="-fx-background-color: #23B5D3; -fx-background-radius: 10;">
+         <children>
+            <Text fx:id="totalusers" fill="WHITE" layoutX="67.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <ImageView layoutX="63.0" layoutY="14.0">
+               <image>
+                  <Image url="@images/Icons/user24px.png" />
+               </image>
+            </ImageView>
+            <Text fill="#071013" layoutX="24.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Users:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Pane layoutX="375.0" layoutY="350.0" prefHeight="292.0" prefWidth="300.0" style="-fx-background-color: #23B5D3; -fx-background-radius: 10;">
+         <children>
+            <PieChart fx:id="gender_piechart" prefHeight="292.0" prefWidth="300.0" />
+         </children></Pane>
+      <Pane fx:id="ranking_pane" layoutX="1061.0" layoutY="208.0" prefHeight="223.0" prefWidth="341.0" style="-fx-background-color: #23B5D3; -fx-background-radius: 10;">
+         <children>
+            <VBox fx:id="ranking_box" layoutX="43.0" layoutY="12.0" prefHeight="200.0" prefWidth="256.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="717.0" layoutY="350.0" prefHeight="292.0" prefWidth="321.0" style="-fx-background-color: #23B5D3; -fx-background-radius: 10;">
+         <children>
+            <BarChart fx:id="age_barchart" prefHeight="292.0" prefWidth="321.0">
+              <xAxis>
+                <CategoryAxis prefHeight="21.0" prefWidth="264.0" side="BOTTOM" tickLabelFill="WHITE" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+              </yAxis>
+            </BarChart>
+         </children></Pane>
+      <Pane layoutX="1061.0" layoutY="457.0" prefHeight="185.0" prefWidth="341.0" style="-fx-background-color: #23B5D3; -fx-background-radius: 10;" />
+      <Text fx:id="date" fill="#5b5b5b" layoutX="377.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fill="#071013" layoutX="377.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summary:">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Pane layoutX="547.0" layoutY="208.0" prefHeight="97.0" prefWidth="151.0" style="-fx-background-radius: 10; -fx-background-color: #23B5D3;">
+         <children>
+            <Text fx:id="totalarticles" fill="WHITE" layoutX="68.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="64.0" layoutY="14.0">
+               <image>
+                  <Image url="@images/Icons/document.png" />
+               </image>
+            </ImageView>
+            <Text fill="#071013" layoutX="17.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Articles:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="719.0" layoutY="208.0" prefHeight="97.0" prefWidth="151.0" style="-fx-background-color: #23B5D3; -fx-background-radius: 10;">
+         <children>
+            <Text fill="#071013" layoutX="10.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Products:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="totalproducts" fill="WHITE" layoutX="67.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <ImageView layoutX="63.0" layoutY="14.0">
+               <image>
+                  <Image url="@images/Icons/boutique.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="890.0" layoutY="208.0" prefHeight="97.0" prefWidth="151.0" style="-fx-background-color: #23B5D3; -fx-background-radius: 10;">
+         <children>
+            <Text fill="#071013" layoutX="20.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Events:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="totalevents" fill="WHITE" layoutX="67.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <ImageView layoutX="63.0" layoutY="14.0">
+               <image>
+                  <Image url="@images/Icons/calendar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="#071013" layoutX="377.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Charts:">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#071013" layoutX="377.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Dashboard:">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700" prefWidth="1200" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.loginUser">
+    <children>
+        <TextField fx:id="username_input" layoutX="116.0" layoutY="299.0" prefHeight="29.0" prefWidth="264.0" style="-fx-border-color: white; -fx-background-color: black; -fx-border-radius: 100; -fx-background-color: black; -fx-border-width: 2; -fx-text-fill: white;" />
+      <PasswordField fx:id="password_input" layoutX="116.0" layoutY="364.0" prefHeight="29.0" prefWidth="264.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 100; -fx-border-width: 2; -fx-text-fill: white;" />
+        <Text fill="WHITE" layoutX="115.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+            <font>
+                <Font name="Montserrat Regular" size="25.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="116.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="171.0">
+            <font>
+                <Font name="Montserrat Regular" size="25.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="115.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log back in!">
+            <font>
+                <Font name="Dubai Bold" size="50.0" />
+            </font>
+        </Text>
+        <CheckBox layoutX="116.0" layoutY="400.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="171.0" style="-fx-background-color: black;" text="Stay Connected" textFill="WHITE" />
+      <Hyperlink layoutX="115.0" layoutY="419.0" onAction="#redirect_passwordpage" text="Forgot your password?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+        <Button layoutX="116.0" layoutY="453.0" mnemonicParsing="false" onAction="#login" prefHeight="29.0" prefWidth="107.0" style="-fx-border-color: white; -fx-border-radius: 100; -fx-background-color: black; -fx-border-width: 2;" text="Log in" textFill="WHITE">
+            <font>
+                <Font name="Montserrat SemiBold" size="15.0" />
+            </font>
+        </Button>
+        <Text fill="WHITE" layoutX="236.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or" wrappingWidth="14.490234375">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+        <Hyperlink layoutX="250.0" layoutY="458.0" onAction="#register_page" text="register">
+         <font>
+            <Font size="14.0" />
+         </font></Hyperlink>
+        <Text fill="WHITE" layoutX="307.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="if you're new here." wrappingWidth="134.0">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <ImageView fitHeight="700.0" fitWidth="600.0" layoutX="600.0">
+         <image>
+            <Image url="@images/login_bg.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="error" fill="RED" layoutX="117.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

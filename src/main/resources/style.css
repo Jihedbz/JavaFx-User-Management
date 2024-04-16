@@ -1,0 +1,14 @@
+.button {
+  border-radius: 100px;
+  border-color: white;
+  border-width: 2;
+  background-color: black;
+  -fx-background-color: black;
+  -fx-border-color: white;
+  -fx-text-fill: white;
+  -fx-border-radius: 100px;
+  -fx-border-width: 2px;
+}
+.date-picker .text-field {
+  -fx-control-inner-background: white;
+}
