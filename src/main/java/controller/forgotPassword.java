@@ -106,14 +106,14 @@ public class forgotPassword {
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("jih3db@gmail.com", "nfvv wspg lpmo nzps");
+                return new PasswordAuthentication("Your address", "Application Password (ask google)");
             }
         });
 
         try {
             // Create a MimeMessage object
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("jih3db@gmail.com"));
+            message.setFrom(new InternetAddress("Your Email"));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(subject);
             message.setContent(body, "text/html"); // Set the content type to HTML
